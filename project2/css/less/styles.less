@@ -1,0 +1,255 @@
+@primary-color:#2b28e0;
+@secondary-color:#f0f0f7;
+@tercially-color:#0b0c1d;
+
+
+.backgroundimage{
+    
+    background-image: url(construction.jpeg);
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    opacity: 0.15;
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+   
+}
+
+
+body::after{
+    background-color: #cccde0;
+}
+
+.topdiv{
+    height: 100px;
+    background: white;
+    border-bottom: 5px solid @primary-color;
+}
+
+
+.logofirm{
+    animation-name: logoapperar;
+    animation-duration: 2s;
+}
+
+@keyframes logoapperar {
+    0%   { margin-top:-10%;}
+    100%   { margin-top:0%;}
+}
+
+.truck{
+    position: relative; 
+    animation-name: mymove;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 770px) {
+    .truck {
+        display: none;
+    }
+}
+
+@keyframes mymove {
+    0%   { margin-left:10%;}
+    50%   { margin-left:30%;}
+    100%   { margin-left:60%;}
+
+}
+
+.navigationbar{
+    background-color: @secondary-color;
+    color: @tercially-color;
+    font-size: 1.5em;
+    height: 50px;
+    box-shadow: 0 5px 8px gray;
+    
+}
+
+.linemenu, .dropmenu{
+    position: absolute;
+    right: 10px;
+}
+a:hover {
+    text-decoration: none;
+  }
+
+.dropline{
+    border-bottom: 10px solid @primary-color;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 50px;
+}
+
+.dropdown{
+    background-color: @secondary-color;
+    color: @tercially-color;
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+    top:150px;
+    width:200px;
+    display: none;
+    text-align: end;
+    animation-name: roll;
+    animation-duration: 0.5s;
+}
+
+@keyframes roll {
+    0%   { height: 0px;
+           font-size: 0em;  
+        }
+    
+    100%   { height: 120px;
+            font-size: 1.0em;
+            }
+}
+
+.centerdiv{
+    padding: 0 auto;
+}
+
+
+footer{
+    position: absolute;
+    
+    background-color: #6e6e75;
+    width: 100%;
+    color: @secondary-color ;
+    z-index: 1;
+    height: 170px;
+    border-top: 5px solid rgb(83, 73, 73);
+}
+
+.dropmenu:active .dropline{
+    border-bottom: 10px solid @tercially-color;
+}
+
+@media only screen and (min-width: 771px) {
+    .dropmenu {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 771px) {
+    .dropdown {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 771px) {
+    .texts {
+        font-size: 1.5em;
+    }
+}
+
+
+@media only screen and (max-width: 770px) {
+    .linemenu {
+        display: none;
+    }
+
+}
+
+.dropdown{
+     
+        div:hover{
+            background: @primary-color;
+            a{
+                
+                color: white;
+            }
+        }               
+    
+}
+
+.backgroundimage:hover{
+    .dropdown {
+        visibility: hidden;
+    }
+}
+
+.texts{
+    
+    z-index: 3;
+    position: absolute;
+    
+}
+
+.texts{
+    p{  
+        padding-top: 15px;
+        line-height: 150%;
+    }
+}
+
+.gallery{
+    height: 90vmin;
+    width: 75%;
+    padding: 15px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    overflow-y: scroll;
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+    margin-top: 20px;
+    
+}
+
+.gallery{
+    
+    .row{
+        border-bottom: 2px solid gray;
+        margin: 15px;
+        padding: 5px;
+    }
+    
+}
+
+.gallery::-webkit-scrollbar{
+    width: 1em;
+}
+
+.gallery::-webkit-scrollbar-track{
+    background: @secondary-color;
+    margin-block: .5em;
+}
+
+.gallery::-webkit-scrollbar-thumb{
+    background: @primary-color;
+    border-radius: 100vw;
+}
+
+.rowgallery {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  
+    img:active {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            z-index: 10;
+            height: 400px;
+            
+        }
+  }
+
+
+.rowgallery::-webkit-scrollbar{
+    width: 0.75em;
+}
+
+.rowgallery::-webkit-scrollbar-track{
+    background: @secondary-color;
+    margin-block: .5em;
+}
+
+.rowgallery::-webkit-scrollbar-thumb{
+    background:@tercially-color;
+    border-radius: 100vw;
+}
